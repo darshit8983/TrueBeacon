@@ -1,0 +1,23 @@
+
+  <div>
+    <h2>Display chart</h2>
+    <div>
+      <label>Symbol Name:
+        <input [(ngModel)]="req.instName" placeholder="Symbol Name"/>
+      </label>
+      <br>
+      <ul class="Available">
+        <li *ngFor="let s of symbols; let i=index;">
+            <span class="badge"></span> {{s}}
+        </li>
+    </ul>
+      <label>From Date [yyyy-mm-dd]:
+        <input [(ngModel)]="req.fromDate" placeholder="yyyy-mm-dd"/>
+      </label><br>
+      <label>To Date [yyyy-mm-dd]:
+        <input [(ngModel)]="req.toDate" placeholder="yyyy-mm-dd"/>
+      </label><br>
+    </div>
+    <button (click)="getHistData()">get</button>
+  </div>
+
