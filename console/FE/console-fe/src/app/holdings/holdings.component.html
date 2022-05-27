@@ -1,0 +1,31 @@
+
+<table>
+    <tr>
+        <th>Index</th>
+        <th>tradingsymbol</th>
+        <th>exchange</th>
+        <th>isin</th>
+        <th>quantity</th>
+        <th>authorised_date</th>
+        <th>average_price</th>
+        <th>last_price</th>
+        <th>close_price</th>
+        <th>pnl</th>
+        <th>day_change</th>
+        <th>day_change_percentage</th>
+    </tr>
+    <tr *ngFor="let h of holdings; let i=index;">
+        <td> {{i}} </td>
+        <td> {{h.tradingSymbol}} </td>
+        <td> {{h.exchange}} </td>
+        <td> {{h.isin}} </td>
+        <td> {{h.qty}} </td>
+        <td> {{h.authorisedDate}} </td>
+        <td> {{h.avgPrice}} </td>
+        <td> {{h.lastPrice}} </td>
+        <td> {{h.closePrice}} </td>
+        <td> {{h.pnl}} </td>
+        <td> {{h.dayChange}} </td>
+        <td> {{h.dayChangePercent}} </td>
+    </tr>
+</table>

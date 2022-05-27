@@ -22,9 +22,26 @@ export class RestService {
     return body || { };
   }
 
+  getHoldings(): Observable<any> {
+    return this.http.get<any>(endpoint + 'mock/portfolio/holdings').pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getProfile(): Observable<any> {
+    return this.http.get<any>(endpoint + 'mock/user/profile').pipe(
+      catchError(this.handleError)
+    );
+  }
+
   getSymbols(): Observable<any> {
-    //console.log(this.http.get<any>(endpoint + 'symbols'))
     return this.http.get<any>(endpoint + 'symbols').pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  placeOrder(order): Observable<any> {
+    return this.http.post(endpoint + 'mock/order/place_order',order).pipe(
       catchError(this.handleError)
     );
   }

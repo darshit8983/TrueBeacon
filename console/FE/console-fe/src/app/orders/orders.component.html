@@ -1,0 +1,11 @@
+<p>orders works!</p>
+Symbol: <input type="text" [(ngModel)]="newOrder.symbol"><br><br>
+Price: <input type="text" [(ngModel)]="newOrder.price"><br><br>
+Qty: <input type="text" [(ngModel)]="newOrder.qty"><br><br>
+Exchange: <input type="text" [(ngModel)]="newOrder.exchange">
+<br><br>
+<button (click)="placeOrder()">Place</button>
+
+<h1>{{response.data.message}}</h1>
+<p>{{response.data.order_id}}</p>
+    
